@@ -70,22 +70,4 @@ Advanced users can customize the decorators even more by passing a SimpleCache o
 `host`, `port` and `db` are the same redis config params used in StrictRedis class of redis-py.
 By default, the `namespace` is the name of the module from which the decorated function is called, but it can be overridden with the `namespace` parameter. 
 
-AUTHOR: Vivek Narayanan  
-
-CONTRIBUTORS: 
-
-Flávio Juvenal
-
-Sam Zaydel  
-
-David Ng
-
-DJ Gilcrease
-
-Johannes Maximilian Toball
-
-Robert Marshall
-
-Ben Hayden
-
-LICENSE: BSD
+AUTHOR: Venkata Reddy M

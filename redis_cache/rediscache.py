@@ -330,6 +330,7 @@ def cache_it(limit=10000, expire=DEFAULT_EXPIRY, cache=None,
 
             serializer = json if use_json else pickle
             fetcher = cache.get_json if use_json else cache.get_pickle
+            # This way, you need to make sure all args must be json or pcikle serializable.
             storer = cache.store_json if use_json else cache.store_pickle
 
             ## Key will be either a md5 hash or just pickle object,

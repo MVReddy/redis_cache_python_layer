@@ -344,7 +344,11 @@ def cache_it(limit=10000, expire=DEFAULT_EXPIRY, cache=None,
                                                        key=cache_key)
 
             try:
-                return fetcher(cache_key)
+                from time import timer
+                start = timer.time()
+                result = fetcher(cache_key)
+                print "Cache took {0} to retireve data from the Redis Server".format(float(timer.time() - start)
+                return result
             except (ExpiredKeyException, CacheMissException) as e:
                 ## Add some sort of cache miss handing here.
                 pass

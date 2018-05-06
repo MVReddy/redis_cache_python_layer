@@ -32,6 +32,19 @@ class SimpleCacheTest(TestCase):
         time.sleep(1.1)
         self.assertRaises(ExpiredKeyException, quick_c.get, "foo")
         quick_c.flush()
+        
+    def test_expire_new(self):
+        quick_c = SimpleCache()
+
+        quick_c.store("foo", "bar", expire=2)
+        time.sleep(1.1)
+        self.assertRaises(ExpiredKeyException, quick_c.get, "foo")
+        quick_c.flush()
+
+        quick_c.store("foo", "bar", expire=timedelta(seconds=2))
+        time.sleep(1.2)
+        self.assertRaises(ExpiredKeyException, quick_c.get, "foo")
+        quick_c.flush()
 
     def test_miss(self):
         self.assertRaises(CacheMissException, self.c.get, "blablabla")

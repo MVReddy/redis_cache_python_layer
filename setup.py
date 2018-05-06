@@ -6,7 +6,7 @@ def openf(fname):
     return open(os.path.join(os.path.dirname(__file__), fname))
 
 setup(
-    name="redis-simple-cache",
+    name="redis-cache-python-layer",
     version="0.0.6",
     author="Vivek Narayanan, Flávio Juvenal, Sam Zaydel",
     author_email="flaviojuvenal@gmail.com",

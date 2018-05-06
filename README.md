@@ -10,12 +10,12 @@ redis-py 2.7.1 (see requirements.txt file)
 Installation:
 -------------
 
-    pip install redis-simple-cache
-
+    pip install redis-cache-python-layer
+    
 or to get the latest version
 
-    git clone git://github.com/vivekn/redis-simple-cache.git
-    cd redis-simple-cache
+    git clone https://github.com/MVReddy/redis_cache_python_layer
+    cd redis-cache-python-layer
     python setup.py install
 
 Usage:
